@@ -1,0 +1,29 @@
+/* ==UserStyle==
+@name           Example
+@namespace      example.com
+@version        1.0.0
+@description    A new userstyle
+@author         Me
+==/UserStyle== */
+
+@-moz-document domain("example.com") {
+    /**
+        Your code goes here!
+        More info in the official documentation at Stylus' wiki:
+        https://github.com/openstyles/stylus/wiki/Writing-UserCSS
+    */
+
+@font-face {
+  font-family: "Tharlon";
+  src: url("https://fonts.gstatic.com/ea/tharlon/v3/Tharlon-Regular.ttf") format("TTDictionary"),
+}
+
+@font-face{font-family:helvetica neue;font-style:normal;font-weight:400;src:local('Helvetica Neue'),url(https://fonts.cdnfonts.com/s/62895/HelveticaNeueRoman.woff) format('woff')}@font-face{font-family:helvetica neue;font-style:italic;font-weight:400;src:local('Helvetica Neue'),url(https://fonts.cdnfonts.com/s/62895/HelveticaNeueItalic.woff) format('woff')}@font-face{font-family:helvetica neue;font-style:normal;font-weight:100;src:local('Helvetica Neue'),url(https://fonts.cdnfonts.com/s/62895/HelveticaNeueUltraLight.woff) format('woff')}@font-face{font-family:helvetica neue;font-style:italic;font-weight:100;src:local('Helvetica Neue'),url(https://fonts.cdnfonts.com/s/62895/HelveticaNeueUltraLightItalic.woff) format('woff')}@font-face{font-family:helvetica neue;font-style:normal;font-weight:200;src:local('Helvetica Neue'),url(https://fonts.cdnfonts.com/s/62895/HelveticaNeueThin.woff) format('woff')}@font-face{font-family:helvetica neue;font-style:italic;font-weight:200;src:local('Helvetica Neue'),url(https://fonts.cdnfonts.com/s/62895/HelveticaNeueThinItalic.woff) format('woff')}@font-face{font-family:helvetica neue;font-style:normal;font-weight:300;src:local('Helvetica Neue'),url(https://fonts.cdnfonts.com/s/62895/HelveticaNeueLight.woff) format('woff')}@font-face{font-family:helvetica neue;font-style:italic;font-weight:300;src:local('Helvetica Neue'),url(https://fonts.cdnfonts.com/s/62895/HelveticaNeueLightItalic.woff) format('woff')}@font-face{font-family:helvetica neue;font-style:normal;font-weight:500;src:local('Helvetica Neue'),url(https://fonts.cdnfonts.com/s/62895/HelveticaNeueMedium.woff) format('woff')}@font-face{font-family:helvetica neue;font-style:italic;font-weight:500;src:local('Helvetica Neue'),url(https://fonts.cdnfonts.com/s/62895/HelveticaNeueMediumItalic.woff) format('woff')}
+ format("TTDictionary"),
+}
+
+body {
+    font-family: "Tharlon";
+  }
+
+}

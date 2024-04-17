@@ -1,0 +1,11 @@
+/* ==UserStyle==
+@name        Example CSS UserStyle
+@description This is an example of a UserStyle. It applies css to webpages rather than js.
+@match       https://userstyles.org/*
+==/UserStyle== */
+
+#id,
+.class,
+.pseudo-element::after {
+    background-color: tomato;
+}

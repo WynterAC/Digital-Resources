@@ -25,7 +25,7 @@
         element.innerText != null
       ) {
         element.style.fontFamily =
-          "HelveticaNeue-Thin";
+          "HelveticaNeue-light, Arial";
       }
     }
   };

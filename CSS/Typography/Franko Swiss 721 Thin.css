@@ -1,0 +1,153 @@
+/*
+      www.OnlineWebFonts.Com 
+      You must credit the author Copy this link on your web 
+      <div>Font made from <a href="http://www.onlinewebfonts.com/fonts">Web Fonts</a>is licensed by CC BY 4.0</div>
+      OR
+      <a href="http://www.onlinewebfonts.com/fonts">Web Fonts</a>
+
+      CSS rules to specify fonts
+
+      font-family: "Franko Thin";
+      font-family: "Franko Italic";
+      font-family: "Franko Thin Italic";
+      font-family: "Franko Bold Italic";
+      font-family: "Franko Light";
+      font-family: "Franko Medium";
+      font-family: "Swiss 721 Thin BT";
+      font-family: "Swis721 Th BT Thin Italic";
+      font-family: "Swiss 721 Thin Italic BT";
+      font-family: "Swis721 Th BT Thin";
+      ;
+
+*/
+
+@font-face{
+    font-family: "Franko Thin";
+    src: url("https://db.onlinewebfonts.com/t/f103074994ffffc1b6c26319ec390603.eot");
+    src: url("https://db.onlinewebfonts.com/t/f103074994ffffc1b6c26319ec390603.eot?#iefix")format("embedded-opentype"),
+        url("https://db.onlinewebfonts.com/t/f103074994ffffc1b6c26319ec390603.woff")format("woff"),
+        url("https://db.onlinewebfonts.com/t/f103074994ffffc1b6c26319ec390603.woff2")format("woff2"),
+        url("https://db.onlinewebfonts.com/t/f103074994ffffc1b6c26319ec390603.ttf")format("truetype"),
+        url("https://db.onlinewebfonts.com/t/f103074994ffffc1b6c26319ec390603.svg#Franko Thin")format("svg");
+    font-weight:normal;
+    font-style:normal;
+    font-display:swap;
+}
+
+@font-face{
+    font-family: "Franko Italic";
+    src: url("https://db.onlinewebfonts.com/t/fb1e3c0e83fd5ddf78d6be21f56b4627.eot");
+    src: url("https://db.onlinewebfonts.com/t/fb1e3c0e83fd5ddf78d6be21f56b4627.eot?#iefix")format("embedded-opentype"),
+        url("https://db.onlinewebfonts.com/t/fb1e3c0e83fd5ddf78d6be21f56b4627.woff")format("woff"),
+        url("https://db.onlinewebfonts.com/t/fb1e3c0e83fd5ddf78d6be21f56b4627.woff2")format("woff2"),
+        url("https://db.onlinewebfonts.com/t/fb1e3c0e83fd5ddf78d6be21f56b4627.ttf")format("truetype"),
+        url("https://db.onlinewebfonts.com/t/fb1e3c0e83fd5ddf78d6be21f56b4627.svg#Franko Italic")format("svg");
+    font-weight:normal;
+    font-style:normal;
+    font-display:swap;
+}
+
+@font-face{
+    font-family: "Franko Thin Italic";
+    src: url("https://db.onlinewebfonts.com/t/eccc6992c6be4960c0d5cd0e59d0ec32.eot");
+    src: url("https://db.onlinewebfonts.com/t/eccc6992c6be4960c0d5cd0e59d0ec32.eot?#iefix")format("embedded-opentype"),
+        url("https://db.onlinewebfonts.com/t/eccc6992c6be4960c0d5cd0e59d0ec32.woff")format("woff"),
+        url("https://db.onlinewebfonts.com/t/eccc6992c6be4960c0d5cd0e59d0ec32.woff2")format("woff2"),
+        url("https://db.onlinewebfonts.com/t/eccc6992c6be4960c0d5cd0e59d0ec32.ttf")format("truetype"),
+        url("https://db.onlinewebfonts.com/t/eccc6992c6be4960c0d5cd0e59d0ec32.svg#Franko Thin Italic")format("svg");
+    font-weight:normal;
+    font-style:normal;
+    font-display:swap;
+}
+
+@font-face{
+    font-family: "Franko Bold Italic";
+    src: url("https://db.onlinewebfonts.com/t/eb9518a0e4299ca52b484202fa6de3b6.eot");
+    src: url("https://db.onlinewebfonts.com/t/eb9518a0e4299ca52b484202fa6de3b6.eot?#iefix")format("embedded-opentype"),
+        url("https://db.onlinewebfonts.com/t/eb9518a0e4299ca52b484202fa6de3b6.woff")format("woff"),
+        url("https://db.onlinewebfonts.com/t/eb9518a0e4299ca52b484202fa6de3b6.woff2")format("woff2"),
+        url("https://db.onlinewebfonts.com/t/eb9518a0e4299ca52b484202fa6de3b6.ttf")format("truetype"),
+        url("https://db.onlinewebfonts.com/t/eb9518a0e4299ca52b484202fa6de3b6.svg#Franko Bold Italic")format("svg");
+    font-weight:normal;
+    font-style:normal;
+    font-display:swap;
+}
+
+@font-face{
+    font-family: "Franko Light";
+    src: url("https://db.onlinewebfonts.com/t/e682a75146c545d32b6ae05a7a59122f.eot");
+    src: url("https://db.onlinewebfonts.com/t/e682a75146c545d32b6ae05a7a59122f.eot?#iefix")format("embedded-opentype"),
+        url("https://db.onlinewebfonts.com/t/e682a75146c545d32b6ae05a7a59122f.woff")format("woff"),
+        url("https://db.onlinewebfonts.com/t/e682a75146c545d32b6ae05a7a59122f.woff2")format("woff2"),
+        url("https://db.onlinewebfonts.com/t/e682a75146c545d32b6ae05a7a59122f.ttf")format("truetype"),
+        url("https://db.onlinewebfonts.com/t/e682a75146c545d32b6ae05a7a59122f.svg#Franko Light")format("svg");
+    font-weight:normal;
+    font-style:normal;
+    font-display:swap;
+}
+
+@font-face{
+    font-family: "Franko Medium";
+    src: url("https://db.onlinewebfonts.com/t/bb79cb3eb0d9213af0d289d1867c5c04.eot");
+    src: url("https://db.onlinewebfonts.com/t/bb79cb3eb0d9213af0d289d1867c5c04.eot?#iefix")format("embedded-opentype"),
+        url("https://db.onlinewebfonts.com/t/bb79cb3eb0d9213af0d289d1867c5c04.woff")format("woff"),
+        url("https://db.onlinewebfonts.com/t/bb79cb3eb0d9213af0d289d1867c5c04.woff2")format("woff2"),
+        url("https://db.onlinewebfonts.com/t/bb79cb3eb0d9213af0d289d1867c5c04.ttf")format("truetype"),
+        url("https://db.onlinewebfonts.com/t/bb79cb3eb0d9213af0d289d1867c5c04.svg#Franko Medium")format("svg");
+    font-weight:normal;
+    font-style:normal;
+    font-display:swap;
+}
+
+@font-face{
+    font-family: "Swiss 721 Thin BT";
+    src: url("https://db.onlinewebfonts.com/t/c2b49b40d5e927781ba62e7a7cbc92a5.eot");
+    src: url("https://db.onlinewebfonts.com/t/c2b49b40d5e927781ba62e7a7cbc92a5.eot?#iefix")format("embedded-opentype"),
+        url("https://db.onlinewebfonts.com/t/c2b49b40d5e927781ba62e7a7cbc92a5.woff")format("woff"),
+        url("https://db.onlinewebfonts.com/t/c2b49b40d5e927781ba62e7a7cbc92a5.woff2")format("woff2"),
+        url("https://db.onlinewebfonts.com/t/c2b49b40d5e927781ba62e7a7cbc92a5.ttf")format("truetype"),
+        url("https://db.onlinewebfonts.com/t/c2b49b40d5e927781ba62e7a7cbc92a5.svg#Swiss 721 Thin BT")format("svg");
+    font-weight:normal;
+    font-style:normal;
+    font-display:swap;
+}
+
+@font-face{
+    font-family: "Swis721 Th BT Thin Italic";
+    src: url("https://db.onlinewebfonts.com/t/56345f2f3a8cb1dc614646a1e37b9fe8.eot");
+    src: url("https://db.onlinewebfonts.com/t/56345f2f3a8cb1dc614646a1e37b9fe8.eot?#iefix")format("embedded-opentype"),
+        url("https://db.onlinewebfonts.com/t/56345f2f3a8cb1dc614646a1e37b9fe8.woff")format("woff"),
+        url("https://db.onlinewebfonts.com/t/56345f2f3a8cb1dc614646a1e37b9fe8.woff2")format("woff2"),
+        url("https://db.onlinewebfonts.com/t/56345f2f3a8cb1dc614646a1e37b9fe8.ttf")format("truetype"),
+        url("https://db.onlinewebfonts.com/t/56345f2f3a8cb1dc614646a1e37b9fe8.svg#Swis721 Th BT Thin Italic")format("svg");
+    font-weight:normal;
+    font-style:normal;
+    font-display:swap;
+}
+
+@font-face{
+    font-family: "Swiss 721 Thin Italic BT";
+    src: url("https://db.onlinewebfonts.com/t/fd3f91b517ed4a8966b991a0f8371fb5.eot");
+    src: url("https://db.onlinewebfonts.com/t/fd3f91b517ed4a8966b991a0f8371fb5.eot?#iefix")format("embedded-opentype"),
+        url("https://db.onlinewebfonts.com/t/fd3f91b517ed4a8966b991a0f8371fb5.woff")format("woff"),
+        url("https://db.onlinewebfonts.com/t/fd3f91b517ed4a8966b991a0f8371fb5.woff2")format("woff2"),
+        url("https://db.onlinewebfonts.com/t/fd3f91b517ed4a8966b991a0f8371fb5.ttf")format("truetype"),
+        url("https://db.onlinewebfonts.com/t/fd3f91b517ed4a8966b991a0f8371fb5.svg#Swiss 721 Thin Italic BT")format("svg");
+    font-weight:normal;
+    font-style:normal;
+    font-display:swap;
+}
+
+@font-face{
+    font-family: "Swis721 Th BT Thin";
+    src: url("https://db.onlinewebfonts.com/t/90099a871ed126964368cf993297ac41.eot");
+    src: url("https://db.onlinewebfonts.com/t/90099a871ed126964368cf993297ac41.eot?#iefix")format("embedded-opentype"),
+        url("https://db.onlinewebfonts.com/t/90099a871ed126964368cf993297ac41.woff")format("woff"),
+        url("https://db.onlinewebfonts.com/t/90099a871ed126964368cf993297ac41.woff2")format("woff2"),
+        url("https://db.onlinewebfonts.com/t/90099a871ed126964368cf993297ac41.ttf")format("truetype"),
+        url("https://db.onlinewebfonts.com/t/90099a871ed126964368cf993297ac41.svg#Swis721 Th BT Thin")format("svg");
+    font-weight:normal;
+    font-style:normal;
+    font-display:swap;
+}
+ 
