@@ -1,0 +1,58 @@
+{
+  "attributes" : {
+    "color" : "#7a52cc"
+  },
+  "background" : {
+    "color" : "#fffae7"
+  },
+  "characters" : {
+    "color" : "#dc322f"
+  },
+  "commands" : {
+    "color" : "#cc7117"
+  },
+  "comments" : {
+    "color" : "#663333"
+  },
+  "insertionPoint" : {
+    "color" : "#050606"
+  },
+  "invisibles" : {
+    "color" : "#cccccc"
+  },
+  "keywords" : {
+    "color" : "#99cc00"
+  },
+  "lineHighlight" : {
+    "color" : "#ffffff"
+  },
+  "metadata" : {
+    "author" : "1024jp",
+    "description" : "CotEditor bundled theme, which is based on Solarized <http:\/\/ethanschoonover.com\/solarized> color scheme by Ethan Schoonover.",
+    "distributionURL" : "https:\/\/coteditor.com",
+    "license" : "Same as CotEditor (Apache, ver.2)"
+  },
+  "name" : "Solarized (Light) copy",
+  "numbers" : {
+    "color" : "#9b7c55"
+  },
+  "selection" : {
+    "color" : "#739aac",
+    "usesSystemSetting" : false
+  },
+  "strings" : {
+    "color" : "#3f7c02"
+  },
+  "text" : {
+    "color" : "#0f1112"
+  },
+  "types" : {
+    "color" : "#0066ff"
+  },
+  "values" : {
+    "color" : "#af39ee"
+  },
+  "variables" : {
+    "color" : "#1c451c"
+  }
+}
