@@ -1,0 +1,26 @@
+{
+  "eablokker.tabsSidebar.config.customKindGroupsOrder" : [
+    "css",
+    "json"
+  ],
+  "eablokker.tabsSidebar.config.customTabOrder" : [
+    "\/Users\/wynterac\/Library\/Mobile Documents\/com~apple~CloudDocs\/Coding \/Colors \/Color Palette\/Color Palette figma 3.css",
+    "\/Users\/wynterac\/Library\/Mobile Documents\/com~apple~CloudDocs\/Coding \/Colors \/Color Scheme with Shades\/Radix Color.css",
+    "\/Users\/wynterac\/Library\/Mobile Documents\/com~apple~CloudDocs\/Coding \/Colors \/Color Palette\/Figma Color Palette 1.css",
+    "\/Users\/wynterac\/Library\/Mobile Documents\/com~apple~CloudDocs\/Coding \/Colors \/Color Palette\/Color Palette 2021.css",
+    "\/Users\/wynterac\/Library\/Mobile Documents\/com~apple~CloudDocs\/Coding \/Colors \/Color Palette\/Mikes colors.css",
+    "\/Users\/wynterac\/Library\/Mobile Documents\/com~apple~CloudDocs\/Coding \/Colors \/Color Palette\/My Palette.css",
+    "\/Users\/wynterac\/Library\/Mobile Documents\/com~apple~CloudDocs\/Coding \/Colors \/Color Scheme with Shades\/Notion Colors.css",
+    "\/Users\/wynterac\/Library\/Mobile Documents\/com~apple~CloudDocs\/Coding \/Colors \/Color Scheme with Shades\/Material Sky Theme.css",
+    "\/Users\/wynterac\/Library\/Mobile Documents\/com~apple~CloudDocs\/Coding \/Colors \/Color Scheme with Shades\/VK Palette.JSON",
+    "\/Users\/wynterac\/Library\/Mobile Documents\/com~apple~CloudDocs\/Coding \/Colors \/Color Scheme with Shades\/Radix Colors.JSON",
+    "\/Users\/wynterac\/Library\/Mobile Documents\/com~apple~CloudDocs\/Coding \/Colors \/Material Colors\/material-colors.json",
+    "\/Users\/wynterac\/Library\/Mobile Documents\/com~apple~CloudDocs\/Coding \/Colors \/Material Colors\/Material Design Colors.css",
+    "\/Users\/wynterac\/Library\/Mobile Documents\/com~apple~CloudDocs\/Coding \/Colors \/Material Colors\/Material Colors.JSON",
+    "\/Users\/wynterac\/Library\/Mobile Documents\/com~apple~CloudDocs\/Coding \/Colors \/Material Colors\/Material Colors.css"
+  ],
+  "workspace.art_style" : 0,
+  "workspace.color" : 5,
+  "workspace.name" : "Color Configurations",
+  "workspace.preview_server_allow_external" : true
+}

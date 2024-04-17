@@ -1,0 +1,124 @@
+{
+  "colors": [
+    {
+      "name": "Cayman",
+      "values": {
+        "hex": "#1570FF",
+        "hexa": "#1570FFff",
+        "rgb": "rgb(21, 112, 255)",
+        "rgba": "rgba(21, 112, 255, 1)",
+        "hsl": "hsl(217, 100%, 54%)",
+        "hsla": "hsl(217, 100%, 54%, 1)",
+        "alpha": 1
+      }
+    },
+    {
+      "name": "Bayside",
+      "values": {
+        "hex": "#9DDEF4",
+        "hexa": "#9DDEF4ff",
+        "rgb": "rgb(157, 222, 244)",
+        "rgba": "rgba(157, 222, 244, 1)",
+        "hsl": "hsl(195, 80%, 79%)",
+        "hsla": "hsl(195, 80%, 79%, 1)",
+        "alpha": 1
+      }
+    },
+    {
+      "name": "Lean",
+      "values": {
+        "hex": "#C2A5F9",
+        "hexa": "#C2A5F9ff",
+        "rgb": "rgb(194, 165, 249)",
+        "rgba": "rgba(194, 165, 249, 1)",
+        "hsl": "hsl(261, 88%, 81%)",
+        "hsla": "hsl(261, 88%, 81%, 1)",
+        "alpha": 1
+      }
+    },
+    {
+      "name": "Don CeSar",
+      "values": {
+        "hex": "#FFB3DA",
+        "hexa": "#FFB3DAff",
+        "rgb": "rgb(255, 179, 218)",
+        "rgba": "rgba(255, 179, 218, 1)",
+        "hsl": "hsl(329, 100%, 85%)",
+        "hsla": "hsl(329, 100%, 85%, 1)",
+        "alpha": 1
+      }
+    },
+    {
+      "name": "Naples",
+      "values": {
+        "hex": "#FECE00",
+        "hexa": "#FECE00ff",
+        "rgb": "rgb(254, 206, 0)",
+        "rgba": "rgba(254, 206, 0, 1)",
+        "hsl": "hsl(49, 100%, 50%)",
+        "hsla": "hsl(49, 100%, 50%, 1)",
+        "alpha": 1
+      }
+    },
+    {
+      "name": "Navel",
+      "values": {
+        "hex": "#F97600",
+        "hexa": "#F97600ff",
+        "rgb": "rgb(249, 118, 0)",
+        "rgba": "rgba(249, 118, 0, 1)",
+        "hsl": "hsl(28, 100%, 49%)",
+        "hsla": "hsl(28, 100%, 49%, 1)",
+        "alpha": 1
+      }
+    },
+    {
+      "name": "Hyla",
+      "values": {
+        "hex": "#389810",
+        "hexa": "#389810ff",
+        "rgb": "rgb(56, 152, 16)",
+        "rgba": "rgba(56, 152, 16, 1)",
+        "hsl": "hsl(102, 81%, 33%)",
+        "hsla": "hsl(102, 81%, 33%, 1)",
+        "alpha": 1
+      }
+    },
+    {
+      "name": "Grey",
+      "values": {
+        "hex": "#454F59",
+        "hexa": "#454F59ff",
+        "rgb": "rgb(69, 79, 89)",
+        "rgba": "rgba(69, 79, 89, 1)",
+        "hsl": "hsl(210, 13%, 31%)",
+        "hsla": "hsl(210, 13%, 31%, 1)",
+        "alpha": 1
+      }
+    },
+    {
+      "name": "Medium Grey",
+      "values": {
+        "hex": "#737F8B",
+        "hexa": "#737F8Bff",
+        "rgb": "rgb(115, 127, 139)",
+        "rgba": "rgba(115, 127, 139, 1)",
+        "hsl": "hsl(210, 9%, 50%)",
+        "hsla": "hsl(210, 9%, 50%, 1)",
+        "alpha": 1
+      }
+    },
+    {
+      "name": "Light Grey",
+      "values": {
+        "hex": "#8D99A7",
+        "hexa": "#8D99A7ff",
+        "rgb": "rgb(141, 153, 167)",
+        "rgba": "rgba(141, 153, 167, 1)",
+        "hsl": "hsl(212, 13%, 60%)",
+        "hsla": "hsl(212, 13%, 60%, 1)",
+        "alpha": 1
+      }
+    }
+  ]
+}
