@@ -1,0 +1,728 @@
+    <meta charset="utf-8"><!-- -*- markdown -*- -->
+
+            **CS371: Computational Graphics**
+  *Fall 2016* - [Williams College](http://www.williams.edu) - [Computer Science Department](http://cs.williams.edu) - [Film and Media Studies](http://catalog.williams.edu/catalog.php?&strm=1171&subj=&sbattr=FMST_FMSTCORE)
+   Prof. [Morgan McGuire](http://cs.williams.edu/~morgan), <mcguire@cs.williams.edu>
+
+
+
+![<small>"[Tiny Planet Clouds](https://www.shadertoy.com/view/ldyXRw)" by Valentin Galea</small>](image/world.jpg width="30%" border="2")
+Computational graphics is the science of visual communication. This
+interdisciplinary course combines the study of ray optics, numerical
+integration techniques, computational geometry and topology,
+aesthetics, human perception, and software engineering.
+
+This semester, the theme of CS371 is *procedural synthesis*: autonomous and guided algorithms that
+generate rich 3D content to relieve us of placing every detail by hand and enable infinite virtual worlds.
+
+![<small>"[Cloud Ten](https://www.shadertoy.com/view/XtS3DD)" by nimitz</small>](image/sky.jpg width="30%" border="2")
+The applications are diverse: think about [plants](https://vimeo.com/114446206),
+[buildings](http://research.michael-schwarz.com/publ/files/cgapp-sig15.pdf),
+[cities](https://graphics.ethz.ch/Downloads/Publications/Papers/2001/p_Par01.pdf),
+[decay](http://www.cs.tau.ac.il/~dcor/articles/2016/TW.pdf),
+[terrain](http://web.mit.edu/cesium/Public/terrain.pdf),
+[planets](http://bruno-simon.com/lab/procedural-planet/),
+[space ships](https://www.youtube.com/watch?v=VnyerXljmrQ&t=0m30s),
+[materials](http://luthuli.cs.uiuc.edu/~daf/courses/computergraphics/week8/shading.pdf),
+[characters](https://www.youtube.com/watch?v=mvw2IDJ8cEY),
+and [animation](http://www.utdallas.edu/atec/midori/Handouts/procedural_animation.htm).
+
+_This syllabus is revised frequently. The latest version is always online
+at http://graphics.cs.williams.edu/courses/cs371_
+
+
+Requirements
+======================================================================================
+
+Prerequisites
+: - [*CS136*: Data Structures and Advanced Programming](http://www.cs.williams.edu/csci-136-data-structures-and-advanced-programming-q/) and
+  - [*CS237*: Computer Organization](http://www.cs.williams.edu/csci-237-computer-organization-q/) _or permission of the instructor_
+
+Textbooks
+: - *_P&P_*: Hughes et al., [_Computer Graphics: Principles and Practice (3rd ed.)_](http://amzn.to/29RCAtm), Addison-Wesley, 2013 ($77)
+  - *_GC_*: McGuire, [_The Graphics Codex_](http://graphicscodex.com), Casual Effects, 2011 ($10)
+
+On Reserve
+: - _P&P_ and [_No Man's Sky_](http://www.no-mans-sky.com/) (PS4) are on reserve in Schow.
+  - [_Tiltbrush_](https://www.tiltbrush.com/), [_The Lab_](http://store.steampowered.com/app/450390/),
+    and several other VR experiences are on reserve in Sawyer.
+  - [_Minecraft_](https://minecraft.net/en/) and [_Spelunky_](http://www.spelunkyworld.com/)
+    are available by appointment.
+
+Equipment
+: ![<small>"[Fish Swimming](https://www.shadertoy.com/view/ldj3Dm)" by Íñigo Quílez</small>](image/fish.jpg width="30%" border="2")
+  You do not need to buy any computer equipment for the course.  OIT
+  will provide you with a self-booting Windows 10 USB disk that
+  contains the CS371 development stack. You can plug this into any
+  computer in Jesup 203 to reboot it as a CS371 development station.
+  Pick up this disk from ELC in Sawyer before 1pm on Sep. 8.
+
+  You may also use the USB disk on your own computer as well.  Although we don't provide
+  technical support for that. I recommend using a machine with at least 4GB of RAM and an
+  NVIDIA GeForce 950 or better GPU. The CS department usage policy prohibits you
+  from rebooting any lab machine, so you can't use your CS371 disk on CS machines.
+
+Time
+: ![<small>"[Elephant](https://www.shadertoy.com/view/4dKGWm)" by Íñigo
+  Quílez</small>](image/elephant.jpg width="30%" border="2") Attendance is required at all
+  class sessions. Plan to invest an average of *10 hours per week* on this course, including
+  scheduled class time. The balance will shift from more reading early in the semester to more
+  development later.  We actively focus on workflow. You will monitor your time and I'll help
+  you learn to work efficiently.
+
+  Many students are excited by reative opportunities and choose to spend more time than
+  required on projects. Be clear with yourself and your teammates about when you are working to
+  satisfy the assignment vs. pursuing your own initiatives. Communicate with your partners
+  about your goals and schedule, and respect that theirs may differ. If one partner wants to
+  spend six hours on a project and another one wants to spend twelve, that's fine as long as
+  you're contributing equally to the part that satisfies the assignment specification.
+
+  ![<small>[_No Man's Sky_](http://www.no-mans-sky.com/) by Hello
+  Games</small>](image/no-mans-sky.jpg width="30%" border="2") Assume that *only 20% of your
+  time will be spent on "implementation"*. The rest of your time will be spent planning,
+  designing, documenting, debugging, testing, creating data files, using your program for
+  experiments, and writing your lab report. This is representative of the research and industry
+  experience and is what you should be prepared for in a 300-level CS course. So, schedule
+  accordingly: if you burn eight hours on implementation each week, then you won't have enough
+  time for the other elements of the assignments and the course.
+
+
+Readings
+=================================================================================
+
+Short chapters in the _Graphics Codex_ are based on my lecture notes from previous years. They
+provide most of the essential information for the projects.
+
+Long chapters in _Principles and Practice_ explain the theory and details of techniques that we
+study. In many cases, these readings go beyond what is needed for the weekly projects. However,
+you will need this depth for the midterm and final projects and for the exams, so don't fall
+behind.
+
+The _Graphics Codex_ also contains encyclopedia-like entries for reference, with links to the
+programming documentation used in class.
+
+Lecture does not comprehsively cover the information required for projects and exams. The
+reading is better suited to that task. Instead, we use lecture to address the most interesting
+and challenging concepts in each unit. Arrive prepared for discussion, having completed the
+assigned reading and with notes of your questions.
+
+
+Evaluation
+=====================================================================
+
+You'll receive both quantitative and qualitative evaluation of your
+work, with emphasis on your scientific and engineering *process*
+for projects and *mathematics* and *algorithms* for exams.
+
+
+    Component                     |  Percentage
+   -------------------------------|-------------------
+    *Individual* Projects 0, 1, 5 | 18%
+    *Pair* Projects 2, 3, 6       | 18%
+    *Team* Projects 4, 7          | 18%
+    Exam 1                        | 18%
+    Exam 2                        | 18%
+    Engagement                    | 10%
+
+
+Projects
+------------------------------------------------------------
+
+*Project* grades are frequently high (>70% credit). You can receive almost full credit for a
+well-designed and written program that addresses the specification and is clearly presented in
+your report, even if does not produce a very satisfying result due to implementation
+errors. Prioritize process, design, and clear communication over fixing every last bug when
+running low on time. Within each project, credit is assigned _approximately_ as follows:
+
+
+    Element                                    |  Percentage
+   --------------------------------------------|-------------------
+    Adherance to the specification             | 35%
+    `report.md.html` quality and correctness   | 35%
+    Code readability and Doxygen documentation | 15%
+    Process as documented in `journal.md.html` | 15%
+
+Process and readability grades for a project will be pro-rated when the specification is
+incompletely satisfied.
+
+Project have hard deadlines that are enforced to the second (according to the server's time).
+Most are due on *Monday nights at 10pm*.  You don't hand anything in explicitly. Instead, I
+check out whatever is in SVN as of the deadline. Although there is nothing to stop you from
+commiting changes after the deadline, beware that I won't see them.
+
+![<small>[_Minecraft_](https://minecraft.net/en/) by Mojang</small>](image/minecraft.jpg width="30%" border="2")
+Some questions I consider when evaluating source code are: Is it possible for someone
+unfamiliar with it to find specific routines quickly? Is the code easy to understand? Does it
+make good tradeoffs between efficiency, clarity, and flexibility? Are data structures used
+effectively? Are the algorithms correct? Are the geometry and physics correct?
+
+When evaluating the report (and journal), I consider: Do the experiments adequately explore the
+correctness, performance, robustness, and parameter space of the algorithm?  Are known bugs
+made clear, along with how you tried to solve them?  Are appropriate sources cited for
+algorithms and code?  Does the overview documentation guide a reader to the relevant source
+code documentation?  Is the architecture of the program clear?
+
+<!-- The report and code should both be as concise as possible without compromising clarity.  Use
+the papers we've read as examples of how to describe experiments compactly. -->
+
+I require you to report the number of hours that you spent on the project. That number will not
+affect your grade.  If you're spending a lot more time than others, then I will suggest some
+ways to improve your workflow. If you're spending much less time than I expected then I'll
+suggest some other directions you might optionally explore if you want to learn more about
+graphics.
+
+In addition to the explicit instructions in the project specifications, always:
+
+- Remove unused code and data from your program.  This includes code from the previous project
+  that is no longer used, old report images, and the starter project's default event handlers
+  when you don't need them. (`GApp::onInit` is the only one that you need to override for the
+  first half of the course!) An exception is debugging and unit testing code that you may need
+  again in the future, which is acceptable to retain.
+
+- Document individual entry points and variables.
+
+- Put your report in `doc-files/report.md.html` and put your name, email address, and the name
+  of the project ("Meshes") on the top of your report. Assume that it will be read after
+  the documentation build copies it to `build/doc` for the purpose of relative links.
+
+- Briefly document your contributions to each source file at the top in a comment when working
+  from starter code or code from a previous project. For example, "2016-09-01: Reformatted by
+  Delia" or "2016-09-02: Cylinder generation code by Khan" This is not a common software
+  engineering practice, but it is useful if you're completing these projects for a course and
+  will be graded.
+
+Extensions
+------------------------------------------------------------
+
+![<small>"[Skyline](https://www.shadertoy.com/view/XtsSWs)" by Octavio Good</small>](image/city.jpg width="30%" border="2")
+Because of the cumulative nature of projects and group-programming aspect of the course, it is
+essential that everyone begin and end assignments at the same time. So, *late work is not
+accepted and I do not grant extensions in CS371*.
+
+Please read the entire schedule for the course to avoid missing deadlines for your planned
+absences, and start work early each week to minimize the impact of unplanned absences.
+
+
+Engagement
+------------------------------------------------------------
+
+*Engagement* is my subjective evaluation of how you interact with the material and students. I
+use the full range from 0 (e.g., submits required work, attends some classes) to 10% (e.g.,
+attends all sessions, asks questions, refers to the readings, goes a bit beyond the
+specification on assignments, raises new topics in class) for this. You can engage through
+math, coding, team work, and discussion.  Beware that repeated unexcused absences and lateness
+will quickly lower your engagement score to zero.
+
+![<small>"[Ancient Temple](https://www.shadertoy.com/view/4lX3Rj)" by Pablo Roman Andrioli (Kali)</small>](image/temple.jpg width="30%" border="2")
+All computing devices must be turned off during lecture. This includes phones and
+laptops. Recording of lectures is prohibited.
+
+Computing devices related to the course are obviously welcome during lab.  Unrelated social
+media, web, and communication application use are prohibited during lab---that is a time set
+aside for you to focus solely on projects for this course.
+
+
+Absences
+------------------------------------------------------------
+
+![<small>"[Fractal Explorer](https://www.shadertoy.com/view/4s3GW2)" by Dave
+Hoskins</small>](image/fractal.jpg width="30%" border="2")
+I will (of course) excuse absences for medical reasons, cultural and religious holidays, jury
+duty, and serious personal problems. These must be documented by a dean emailing me to remove
+any ambiguity or subjectivity.
+
+I encourage students who may need disability-related accommodations for this course to contact
+the deans at 413-597-4171, as are those experiencing mental or physical health challenges that
+are significantly affecting their academic work.
+
+Even in exceptional cases such as these, I generally can't give extensions because the projects
+run cumulatively, continuously, and often in groups. Instead, I can excuse you from work and
+adjust your final grade accordingly.
+
+
+Project SVN
+=====================================================================
+
+Projects specifications are available on the
+[Graphics Codex Projects](http://graphicscodex.com/projects/projects/#toc2) site by Wednesday
+at noon each week. (Drafts are sometimes available well beforehand, but I adjust them until
+Wednesday.) Note that not every project on that site is assigned for this course.
+
+The project SVN repositories for you to commit your code are named:
+
+<blockquote>`svn://graphics-svn.cs.williams.edu/cs371/students/`_lab_`/`_team_</blockquote>
+
+where the lab names are `0-cubes`, `1-meshes`, `2-rays`, `3-paths`, `4-midterm`,
+`5-raymarch`, `6-isosurface`, and `7-final`. Your SVN username is your short-form email address from
+OIT, for example, "`brk3`" if your email address is "`brk3@williams.edu`". You will receive
+your SVN password on the first day of class.
+
+For a solo project, the team name is your username. For a group project, the team name is
+everyone's username sorted alphabetically and joined with plus signs, for example,
+"`brk3+msm1`".
+
+SVN doesn't care what your directory is called, so I recommend that you name your directory
+after the lab instead of the default of the team name. For example, for the first lab, user
+`brk3` would check out `svn://graphics-svn.cs.williams.edu/cs371/students/0-cubes/brk3` to
+local directory `0-cubes`.
+
+![<small>"[Oceanic](https://www.shadertoy.com/view/4sXGRM)" by
+Frankenburgh</small>](image/ocean.jpg width="30%" border="2")
+Set up your *project framework in SVN and read the assignment thoroughly
+before you arrive in lab* on Thursday afternoons, so that we can immediately begin
+workshopping your design and implementation plan. Assignments are designed so that if you
+arrive prepared, you will then hit the crux while we're together in lab.
+Check in code early and often, and keep your build well-documented from the beginning.
+
+If you need help with something on your project, just email me your project's team name and
+tell me what the problem is. I can remotely check out your code, and even check in fixes. The
+SVN logs are your proof of which lines of code you wrote and when you wrote them. I will check
+them to verify claims of good workflow and scheduling, and fairness on group projects.
+
+I will occasionally tell you to "update your G3D" so that you can access the latest
+API features and data for the project. This means that you should SVN update the
+`c:\g3d` directory on your computer and then run `buildg3d lib` at the command line in the
+`c:\g3d\G3D10` directory.
+
+
+Schedule
+=====================================================================
+
+ Monday                        |  Tuesday                                | Thursday                                | Friday
+ ------------------------------|-----------------------------------------|-----------------------------------------|-------------------------------
+ &nbsp;                        |<b>Lecture</b> TCL206<br/>*9:55-11:10am* |<b>Lecture</b> TCL206<br/>*9:55-11:10am* | &nbsp;
+ Office Hrs TCL308<br/>1-2:30pm|                                         |<b>Lab</b> Jesup 203<br/>*1-4pm*         | Office Hrs TCL308<br/>1-2:30pm
+
+Jamie Lesser's TA office hours 7-10pm on Sundays in Jesup 203.
+
+Additional faculty office hours are available by appointment. I'm usually free 9am-5pm except
+for my other courses (see my [web page](http://cs.williams.edu/~morgan)), but tend to get booked with
+ad-hoc meetings about two days ahead.  So, if you can't come to office hours, please propose
+three times in the coming week by email and I'll choose the first for which I'm available.
+
+The full semester schedule follows. Read the assigned *texts before lectures* that they are
+associated with. In general, the course shifts emphasis from a lot of reading at the beginning
+to a lot of software development by the end.
+
+
+Thu 8 Sep 2016: Welcome
+  - *Read*:
+    - "*Preface*" in _GC_
+    - "*C++*" in _GC_
+    - The [*Developer Tools*](http://g3d.cs.williams.edu/g3d/G3D10/build/manual/devtools.html)
+    chapter in the G3D documentation
+    - ["*Configure the Editor*"](http://graphicscodex.com/projects/tools/#toc4) section of Recommended Toolset
+    - Skim the [G3D Build System Instructions](http://g3d.cs.williams.edu/g3d/G3D10/readme.md.html), which describe how I configured your USB disk
+  - ![<small>"Burning Safari"</small>](image/burning_safari.jpg border=1 width="100px") Class policies (this syllabus!)
+  - 3D coordinates
+  - Euler angles
+  - Hadamard vector operations
+  - Working with specifications
+  - Modeling 3D Graphics
+  - Watch "Burning Safari" (France 2006, 2 minutes, English) by Aupetit, Maleo, Predal, La Taille,
+    Trebutien, and Irzenski at Goeblins L'Ecole de L'Image
+  + Lab this afternoon in Jesup 203. Get a USB disk before lab.
+
+Thu 8 Sep 2016: Lab 0: Cubes
+  - *Read* the [*Cubes project*](http://graphicscodex.com/projects/cubes/) document before class
+  - Complete the project before the following Monday night, at 11pm
+  + First time setup
+    + Shut down the computer
+    + Plug into the USB3 ("SS" icon) port
+    + Boot the computer
+    + Log in as cs371/cs371
+    + SVN update G3D
+    + Start G3D build
+    + Windows Check for Updates
+    + Install NVIDIA GeForce Experience
+    + Update driver
+    + Shut down (DO NOT UNPLUG the USB disk until shutdown)
+    + Unplug your disk
+    + Boot the computer again
+  + Normal login
+    + Shut down the computer
+    + Plug in your disk
+    + Boot
+    + ...
+  + Walkthrough
+  - Subversion
+  - Visual Studio
+  - G3D Starter project
+  - Basic C++
+  - Writing to files
+  - Scene file format
+  - Markdeep and Doxygen
+  - Writing a report
+
+Tue 13 Sep 2016: Modeling with Triangles
+  - *Read*:
+    - This *syllabus*
+    - "*Introduction*" in _GC_
+    - "*Version Control Basics*" in _GC_
+    - "*Surface Geometry*" in _GC_
+    - *Ch. 14*, "Standard Approximations and Representations" in _P&P_
+  - Indexed triangle meshes
+
+Thu 15 Sep 2016: Transformations
+  - *Read*:
+    - *Ch. 14.1-14.3* on number representations in _P&P_
+    - "*Floating Point Formats*" in _GC_
+    - *Ch. 10*, "Transformations in Two Dimensions" in _P&P_
+    - *Ch. 11.1-11.2*, "Transformations in Three Dimensions" in _P&P_<!-- - "*Transformations*" in _GC_ -->
+  - ![<small>"Raymond"</small>](image/raymond.jpg border=1 width="100px") Linear algebra primer
+  - Translation
+  - Scale
+  - Rotation
+  - Composition
+  - Dot product
+  - Homogeneous coordinates
+  - Object, World, and Camera space
+  - Inversion (general + special cases)
+  - Raymond (France 2006, 5 min, French) by bif, produced by The Mill
+
+Thu 15 Sep 2016: Lab 1: Meshes
+  - *Read* and begin the [*Meshes project*](http://graphicscodex.com/projects/meshes/) document before class
+  + Indexed triangle meshes
+  + Generate cube, cylinder, torus, and heightfield files
+  + Cite erosion etc. papers
+
+Tue 20 Sep 2016: Ray Tracing
+  - *Read*:
+    - "*A Model of Light*" in _GC_
+    - "*The Rendering Equation*" in _GC_
+    - *Ch. 7.6* on coordinates in _P&P_
+  - ![<small>"Exodus"</small>](image/exodus1.jpg border=1 width="100px") Transmission
+  - Rudimentary scattering functions
+  - Geometric intersection
+  - Shadowing
+  + Build pseudocode for the whole ray-tracing algorithm
+
+Thu 22 Sep 2016: Ray Intersection
+  - *Read*:
+    - "*A Camera Model*" in _GC_
+    - "*Ray Casting*" in _GC_
+    - "*Direct Illumination*" in _GC_
+  - ![<small>"Minamita&nbsp;District"</small>](image/minamatama_district.jpg border=1 width="100px") Ray generation
+  - Ray-sphere intersection
+  - Ray-plane intersection
+  - Ray-triangle intersection
+  - "Minamitama District", (Japan, 2008, English, 2 min)
+  - "Exodus", (Sweden, 2013, English, 3 min)
+
+Thu 22 Sep 2016: Lab 2: Rays
+  - *Read* and begin the [*Rays project*](http://graphicscodex.com/projects/rays/) document before class
+
+Tue 27 Sep 2016: Microfacet Models
+  - *Read*:
+     - "*Materials*" in _GC_
+     - *Ch. 27*, "Materials and Scattering" in _P&P_
+     - *Ch. 37*, "Spatial Data Structures" in _P&P_
+  - Spatial data structures
+  - Full BSDF sampling
+  - Scattering functions
+
+Thu 29 Sep 2016: Monte Carlo Methods
+  - *Read*:
+    - "*Rendering Algorithms*" in _GC_
+    - *Ch. 30*, "Probability and Monte Carlo Integration" in _P&P_
+    - *Ch. 31.16-31.18.3*, of "Computing Solutions to the Rendering Equation: Theoretical Approaches." in _P&P_
+    - *Ch. 32.1-32.5* of "Rendering in Practice" in _P&P_
+    - Optional: [Lecture notes](path-tracing-lecture-notes.pdf)
+  - Monte Carlo integration
+  - The path tracing algorithm
+  - Importance sampling
+  - Pixel integration
+  - Direct light integration
+  - Indirect light integration
+  - Parallel SIMD batch processing
+
+Thu 29 Sep 2016: Lab 3: Path Tracing
+  - *Read* and begin the [*Paths project*](http://graphicscodex.com/projects/paths/) before class
+  - Meet at [WCMA](http://wcma.williams.edu/) at 1pm for the [_Both Sides Now_](http://wcma.williams.edu/exhibit/both-sides-now-lexa-and-dan-walsh/) show
+  - Work in lab from 1:30pm-4:00pm
+  + Incremental rendering
+  + Switching to fully threaded model
+
+Tue 4 Oct 2016: Exam 1
+
+Thu 6 Oct 2016: Project Launch
+  - ![<small>"5 faces"</small>](image/5faces.jpg border=1 width=100px) *Meet in Jesup 203*
+  - ["5 faces"](https://www.youtube.com/watch?v=i8hSZGTXTx8) demoscene production (2013, 5min)
+  - ["Home Sweet Home"](https://www.youtube.com/watch?v=aKRZn0uS6eA) Supinfocom Arles (France, 2013, 9:55)
+  - Brief noise overview
+  - Start Design Project #1
+    - Choose either the [Geometry](http://graphicscodex.com/projects/geo-design/index.html) or [Renderer](http://graphicscodex.com/projects/render-design/index.html) design project
+    - Team of three students
+    - Feature/spec size should be less than 1/2 of a regular project
+    - Note intermediate deadline on October 13, 9:55am
+    - ![<small>"Home Sweet Home"</small>](image/home.jpg border=1 width=100px) Schedule:
+      1. Visualize final presentation images
+      2. Race to code completion by Tuesday (plan to implement and reject many prototype designs)
+      3. Evolve specification as code and design solidify
+      4. Write MVP report
+      5. Polish for eight days
+
+Thu 6 Oct 2016: Lab 4: Design Project #1
+  - ![<small>"Loom"</small>](image/loom.jpg border=1 width=100px) ["Loom"](https://vimeo.com/24069938) Filmakademie BW (Germany, 2010, 5:20)
+
+
+Fri 7 Oct 2016: Mountain Day
+
+(Mon 10 Oct 2016): Reading Period
+
+(Tue 11 Oct 2016): Reading Period
+
+Thu 13 Oct 2016: Design Project #1
+  - ![<small>"Turtles All The Way Down"</small>](image/turtles.jpg border=1 width=100px) ["Turtles All The Way Down"](https://www.youtube.com/watch?v=z48t2R2hEJM) Subdream (Germany, 2013, 4:55)
+  - ["Rupture"](https://www.youtube.com/watch?v=sWYU5Xvphwg) ASD (Greece, 2009, 6:42)
+  - Morning session meets in Jesup 203
+  - Specification due
+  - MVP report due
+  - MVP code due
+
+Thu 13 Oct 2016: Design Project #1
+
+Tue 18 Oct 2016: Design Project #1
+  - ![<small>"Rupture"</small>](image/rupture.jpg border=1 width=100px) Morning session meets in Jesup 203
+
+(Thu 20 Oct 2016): No Morning Class
+
+Thu 20 Oct 2016: Design Project #1 Presentations
+  - Format:
+    - Eight minutes, focused on results
+    - Title slide with your names and project name
+    - Full-screen images and diagrams from your report
+    - Optionally, equations from your report
+    - Optionally, video from your report
+    - Citations/bibliography as needed
+    - No other text or diagrams!
+  - AirTame from your seat
+  - Ungraded
+
+Tue 25 Oct 2016: GPU
+  - *Read* "*Ray Marching*" in _GC_
+  - Parallel Architectures
+    - CPU SIMD
+      + (explaining why we threaded strangely)
+    - GPU programming model
+  - Driver + OpenGL as OS
+    - Rasterizer
+    - GLSL
+  - Invoking a full-screen shader
+    - `G3D::Args`
+    - `LAUNCH_SHADER`
+    - Camera and textures
+    - F5 to reload shaders
+  - Camera:
+    - Generating eye rays yourself
+  - Materials:
+    - A simple Blinn-Phong BSDF
+  - Lights:
+    - Implementing biradiance yourself
+    - Environment lighting
+  - [GPU Architecture Lecture Notes](gpu-architecture-notes.pdf)
+
+Thu 27 Oct 2016: ~~Sphere tracing~~
+  - *Read* 
+    - ["Making maps with noise functions"](http://www.redblobgames.com/maps/terrain-from-noise/) by Amit Patel
+    - ["Menger Fractal"](http://www.iquilezles.org/www/articles/menger/menger.htm) by Inigo Quilez
+    - ["SDF Modeling"](http://www.iquilezles.org/www/articles/sdfmodeling/sdfmodeling.htm) video by Inigo Quilez
+  - *Cancelled due to illness*
+  - Signed distance functions
+  - Ray marching
+  - Sphere tracing
+  - Procedural texture
+
+Thu 27 Oct 2016: ~~Lab 5: GPU~~
+  - *Read* and begin the [*GPU project*](http://graphicscodex.com/projects/gpu/) before class
+  - *Cancelled due to illness*
+  - GLSL
+  - Ray marching
+  - CSG
+  - Procedural texture
+
+Tue 1 Nov 2016: Sphere Tracing
+
+Thu 3 Nov 2016: Advanced Sphere Tracing
+  - *Read* *Ch. 24*, "Implicit Representations of Shape" in _P&P_
+  - Intersection operations
+     + Cube as intersections
+  - Being conservative
+  - Bounding spheres
+  - Working with triangle meshes
+    + A triangle
+    + Union of triangles: problematic for inside/outside
+    + Ray casting solution
+    + Grid of triangles
+    + Grid of triangles for inside/outside
+
+Thu 3 Nov 2016: Lab 5: GPU
+  - Complete the [*GPU project*](http://graphicscodex.com/projects/gpu/) begun independently last week
+  - (was Lab 6: Isosurfaces; that lab is cancelled due to rescheduling)
+
+Tue 8 Nov 2016: Marching Cubes
+  + Marching cubes and variants
+  + Using spatial queries
+  + More isosurface work
+
+Thu 10 Nov 2016: Parameteric Curves
+  - ![<small>"The Race"</small>](image/therace.jpg border=1 width=100px) *Read*:
+    - *Ch. 22*, "Splines and Subdivision Curves" in _P&P_
+    - *Ch. 23*, "Splines and Subdivision Surfaces" in _P&P_
+  - "The Race", Autour de Minuit, 15 min, France 2015
+  - Polylines
+  - Splines
+  - Spline patches
+  - Subdivision surfaces
+
+Thu 10 Nov 2016: Lab 7: Final Project
+  - *Read* [Final Project Notes](final-project-notes.pdf)
+  - Due Wed Dec. 7 10 pm
+  - Recommended project topics:
+    - *dragon's hoard*: pile up random coins, gems, goblets, swords, helmets, etc.
+    - surface-level *alien planet* view generator, ala _No Man's Sky_, _Fermi Paradox_, and Musgrave via implicit surfaces and noise functions
+    - *grow ivy* on architectural surfaces
+    - modeling tool ==> implicit surface GLSL code or CPU + marching cubes or point clouds, ala _Dreams PS4_
+    - procedural city, castle, space ships, foliage, forests, buildings, mazes, terrain, etc.
+    - procedural texture generation
+    - mesh melder: marching cubes ==> polygons + texture
+    - data-driven GPU CSG renderer
+    - real-time GPU ocean, clouds, fire, etc.
+  - *Due at 2pm*: McGuire approval of placeholder report "quality" images
+    - Show at least ten images, potentially from different projects
+    - Photoshop mockups and 3rd party images strongly encouraged
+    - I'll greenlight the subset that are compelling and possible
+
+Tue 15 Nov 2016: Final Project
+  - Morning session meet in Jesup 203
+  - *Due at 10am*: Full draft of Report
+
+Thu 17 Nov 2016: CGI Art History I
+  - Pixar art-history lectures/screenings
+
+Thu 17 Nov 2016: Large Models
+  - *MVP Code Due*
+  - Journal must have enough information to present to our guest
+  - Guest lecture by [Patrick Cozzi](http://www.seas.upenn.edu/~pcozzi/) of U. Penn and Analytical Graphics
+
+Tue 22 Nov 2016: CGI Art History II
+  - Pixar art-history lectures/screenings
+
+(Tue 23 Nov 2016): Thanksgiving Break
+
+(Tue 24 Nov 2016): Thanksgiving Break
+
+(Tue 25 Nov 2016): Thanksgiving Break
+
+Tue 29 Nov 2016: Final Project
+  - Morning session meet in Jesup 203
+
+Thu 1 Dec 2016: Rasterization
+  - *MVP Report Due in SVN*
+  - *Read* *Ch. 15*, "Ray Casting and Rasterization" in _P&P_
+  - Rasterization algorithm
+  - Projection matrices
+  - Shadow maps
+
+Thu 1 Dec 2016: Final Project
+
+Tue 6 Dec 2016: Final Project
+  - Morning session meet in Jesup 203
+
+(Thu 8 Dec 2016): No Morning Class
+
+Thu 8 Dec 2016: Final Presentations
+  - Guests welcome
+  - Same rules as for midterm
+  - Course Evaluations
+
+Wed 14 Dec 2016: Exam 2
+  - 1:30pm TCL 206
+
+
+Ethics
+=====================================================================
+
+*Plagiarism* is an academic offense of misrepresenting authorship
+that can result in penalties up to expulsion for an undergraduate. It
+is dishonorable but not illegal.  Note that it is possible to
+plagiarise _your own work_, for example, by resubmitting work from
+another course without attribution.
+
+*Copyright* violation is an independent concept based on the legal right to use material,
+which is enforced by civil courts.
+
+
+Honor Code
+---------------------------------------------------------------------
+
+Students in this course are expected to obey all provisions of the
+[Williams College Honor Code](http://sites.williams.edu/honor-system/academic-honesty/) and the
+[Computer Science Honor Code and Computer Usage Policy](http://www.cs.williams.edu/the-cs-honor-code-and-computer-usage-policy/).
+
+To avoid plagiarism, all contributors, including third party material (e.g., music, video
+footage, 3D models, source code), must be acknowledged in submitted work.  Because we share
+code between projects but change partners, by the end of the course, you'll likely have some
+long attribution lists, for example: _based on Jon Cohen's and Jose Bolivar's shadow code from
+Project 5, which is based on Eliza Washington's recursive ray code from Project 4, ..._.
+
+I encourage you to discuss the projects and reading on the course mailing list
+<cs371-williams@googlegroups.com>. Doing so will reflect positively in your engagement score.
+The only restriction is that you may not post code or solutions to report questions. Likewise,
+I encourage you to ask questions in discussion, lecture, lab, and office hours about the
+projects. If you e-mail me directly about a project, I'll probably edit your message and then
+copy the entire class on the response to spread information more widely.
+
+Furthermore, to remain within the other provisions of Honor Code, you must not take any action
+(including misrepresentation) intended to gain an unfair advantage over another student.
+
+Anyone confused about how those provisions apply in this course should discuss them in advance
+with me.
+
+
+Copyright Law
+---------------------------------------------------------------------
+The materials for this course are protected by the Copyright Law of
+the United States of America and are presented to you with the
+permission of the copyright holder or in accordance with the
+[Fair Use](http://copyright.gov/fair-use/more-info.html)
+provisions.
+
+You may not redistribute copyrighted materials without permission from
+the copyright holder, which may not be me or the College. This
+includes making materials available on websites, public version
+control servers, and file-sharing programs; using 3D models, music,
+and artwork that you have found online for your class projects; and
+restributing the course materials themselves. "I'm a student", "It was
+already available online" and "I didn't use it for commercial
+purposes" are not exceptions under USA Copyright law.
+
+Beware that if you infringe on someone else's copyright then you may
+be liable for penalties including [imprisonment and substantial
+fines](https://www.lib.purdue.edu/uco/CopyrightBasics/penalties.html),
+and that this is entirely outside of the College's and my ability to
+protect or excuse you.
+
+Under the College's intellectual property policy, students retain the
+copyright on coursework that they produce, except for portions that
+are derivative works.
+
+_This section of the syllabus does not constitute legal advice--I am
+notifying you of my own understanding of the relevant law, but it
+is your responsibility to be aware of and follow all applicable laws._
+
+
+Gallery
+===========================================================
+
+Here are images produced by students for the projects this semester:
+
+- [Cubes](gallery/0-cubes/index.html)
+- [Meshes](gallery/1-meshes/index.html)
+- [Rays](gallery/2-rays/index.html)
+- [Paths](gallery/3-paths/index.html)
+- [Midterm](gallery/4-midterm/index.html)
+- [Ray March](gallery/5-raymarch/index.html)
+
+
+<script src="cs371-common.js"></script>
