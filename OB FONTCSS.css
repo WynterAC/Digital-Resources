@@ -124,7 +124,7 @@
     font-family: 'Shree Devanagari 714';
     src: local('Shree Devanagari 714'), local('ShreeDev0714'),
         url('https://raw.githubusercontent.com/WynterAC/Digital-Resources/8aadc982ec2365535f09ae015a69db23ac69aa41/_Font%20Library%20/Font%20Files%20/Monospace/Shree-Devanagari-714.ttf') format('truetype'),
-        url("https://db.onlinewebfonts.com/t/d02befc8fdd8e5315fb21fa7f38fd55a.ttf") format("truetype"),
+        url("https://db.onlinewebfonts.com/t/d02befc8fdd8e5315fb21fa7f38fd55a.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
